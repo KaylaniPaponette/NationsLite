@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55bf156c30b21e409cfbccb3fa704d7, type: 3}
+  m_Name: Teepee
+  m_EditorClassIdentifier: Assembly-CSharp::AttractionProfile
+  sortId: 2
+  title: Regalia Shop
+  description: For all your dancing needs
+  prefab: {fileID: 5621243012009509593, guid: bbfec5e05f15f714390a574fb03e3726, type: 3}
+  icon: {fileID: -3937617133218838248, guid: 0725fe08050ee2a419b9bff48d24ef8b, type: 3}
+  placementPosition: {x: -5, y: 2}
+  rewardPerCycle:
+    type: {fileID: 11400000, guid: 7c2ebf5814399d04f83e78a1d7c05882, type: 2}
+    amount: 5
+  cycleTime:
+    totalMilliseconds: 7000

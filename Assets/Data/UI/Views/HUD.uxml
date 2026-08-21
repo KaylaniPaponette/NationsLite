@@ -1,0 +1,28 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <UIContainer class="hud-container-column">
+        <UIContainer name="hudContainer" class="hud-container">
+            <UIContainer class="top-section">
+                <UIContainer class="top-section-objectives" />
+                <UIContainer class="top-section-time">
+                    <UILabel class="top-section-park-name" text="Powwow Park" />
+                </UIContainer>
+                <UIContainer name="currencyContainer" class="top-section-currency">
+                    <UIContainer name="TopRowRightContainer" class="top-section-row" />
+                    <UIContainer name="BottomRowRightContainer" class="top-section-row" />
+                </UIContainer>
+            </UIContainer>
+
+            <UIContainer class="middle-section" />
+
+            <UIContainer class="bottom-section">
+                <UIContainer class="bottom-container" />
+                <UIContainer name="playerActionsContainer" class="bottom-container">
+                    <UIButton name="buildMenuButton" class="action-button">
+                        <UILabel text="Attractions" />
+                    </UIButton>
+                </UIContainer>
+                <UIContainer name="unitDetailsContainer" class="bottom-container" />
+            </UIContainer>
+        </UIContainer>
+    </UIContainer>
+</engine:UXML>

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55bf156c30b21e409cfbccb3fa704d7, type: 3}
+  m_Name: Arbor
+  m_EditorClassIdentifier: Assembly-CSharp::AttractionProfile
+  sortId: 0
+  title: Arbor
+  description: The main dance area
+  prefab: {fileID: 3962783657361499950, guid: 36161d7b618858749abca3b178ffe1c1, type: 3}
+  icon: {fileID: -4452915650414890756, guid: 0725fe08050ee2a419b9bff48d24ef8b, type: 3}
+  gridSize: {x: 0, y: 0}
+  placementPosition: {x: 0, y: 0}
+  rewardPerCycle:
+    type: {fileID: 11400000, guid: 7c2ebf5814399d04f83e78a1d7c05882, type: 2}
+    amount: 10
+  cycleTime:
+    totalMilliseconds: 5000

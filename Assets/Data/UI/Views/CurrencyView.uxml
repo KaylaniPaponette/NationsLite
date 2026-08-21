@@ -1,0 +1,6 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <UIInteractable class="currency-label-container">
+        <UIImage name="currencyImage" class="currency-image"/>
+        <UILabel name="amountText" text="0" class="currency-cost" />
+    </UIInteractable>
+</engine:UXML>

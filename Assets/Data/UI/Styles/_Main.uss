@@ -1,0 +1,291 @@
+.root-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.fade {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.reward-container {
+    max-width: 250px;
+    align-items: center;
+}
+
+.reward-text {
+    font-size: 48px;
+    color: white;
+}
+
+.selection-button {
+    background-color: rgb(88, 88, 88);
+    border-width: 1px;
+    border-color: rgb(36, 36, 36);
+    border-radius: 3px;
+    padding: 4px 6px;
+    margin: 1px;
+    color: rgb(196, 196, 196);
+    -unity-font-style: bold;
+    min-width: 60px;
+    min-height: 21px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.selection-button:hover {
+    background-color: rgb(106, 106, 106);
+}
+
+.selection-button:active {
+    background-color: rgb(66, 66, 66);
+    color: white;
+}
+
+.selection-button:focus {
+    border-color: rgb(0, 140, 255);
+}
+
+.ui-button:disabled {
+    opacity: 0.5;
+    background-color: rgb(88, 88, 88);
+}
+
+.radial-progress {
+    --percentage-color: white;
+    --track-width: 25;
+    --progress-width: 25;
+    --track-color: rgb(117, 117, 117);
+    margin: 5px;
+    flex-direction: row;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+}
+
+.radial-progress-label {
+    -unity-text-align: middle-left;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+}
+
+.scrollbar {
+    width: 12px;
+    height: 100%;
+}
+
+.scrollbar-track {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(40, 40, 40);
+    border-radius: 6px;
+}
+
+.scrollbar-slider {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(80, 80, 80);
+    border-radius: 6px;
+    position: absolute;
+}
+
+.scrollbar-slider:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+.scrollbar-horizontal {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.scrollbar-vertical {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.ui-toggle {
+    flex-direction: row;
+    align-items: center;
+    margin: 1px;
+    padding: 4px;
+    min-height: 21px;
+}
+
+.ui-toggle__checkmark {
+    width: 18px;
+    height: 18px;
+    background-color: rgb(88, 88, 88);
+    border-width: 1px;
+    border-color: rgb(36, 36, 36);
+    border-radius: 3px;
+    margin-right: 6px;
+}
+
+.ui-toggle__checkmark:hover {
+    background-color: rgb(106, 106, 106);
+}
+
+.ui-toggle:active > .ui-toggle__checkmark {
+    background-color: rgb(66, 66, 66);
+}
+
+.ui-toggle:focus > .ui-toggle__checkmark {
+    border-color: rgb(0, 140, 255);
+}
+
+.ui-toggle:disabled {
+    opacity: 0.5;
+}
+
+.ui-toggle__checkmark--checked {
+    -unity-background-image-tint-color: rgb(196, 196, 196);
+}
+
+.ui-toggle__label {
+    color: rgb(196, 196, 196);
+    -unity-font-style: bold;
+}
+
+.ui-dropdown {
+    min-width: 120px;
+    flex-direction: column;
+    margin: 1px;
+    font-size: 12px;
+}
+
+.ui-dropdown__button {
+    background-color: rgb(88, 88, 88);
+    border-width: 1px;
+    border-color: rgb(36, 36, 36);
+    border-radius: 3px;
+    padding: 4px 6px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(196, 196, 196);
+    -unity-font-style: bold;
+    min-height: 21px;
+}
+
+.ui-dropdown__button:hover {
+    background-color: rgb(106, 106, 106);
+}
+
+.ui-dropdown__button:active {
+    background-color: rgb(66, 66, 66);
+    color: white;
+}
+
+.ui-dropdown__button:focus {
+    border-color: rgb(0, 140, 255);
+}
+
+.ui-dropdown__options-container {
+    display: none;
+    position: absolute;
+    background-color: rgb(88, 88, 88);
+    border-width: 1px;
+    border-color: rgb(36, 36, 36);
+    border-radius: 3px;
+    min-width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    margin-top: 1px;
+}
+
+.ui-dropdown__option {
+    padding: 4px 6px;
+    color: rgb(196, 196, 196);
+    -unity-font-style: normal;
+}
+
+.ui-dropdown__option:hover {
+    background-color: rgb(106, 106, 106);
+}
+
+.ui-dropdown__option:active {
+    background-color: rgb(66, 66, 66);
+    color: white;
+}
+
+.pause-menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(1, 1, 1, 0.75);
+}
+
+.pause-menu-button {
+    width: 512px;
+    min-height: 90px;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: rgba(255, 255, 255, 1);
+    padding: 16px;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-radius: 25px;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-width: 5px;
+    margin-bottom: 18px;
+}
+
+.pause-menu-button:hover {
+    background-color: rgba(1, 1, 1, 0.5);
+}
+
+.pause-menu-button:active {
+    background-color: rgba(1, 1, 1, 0.9);
+}
+
+.pause-menu-button:inactive {
+    background-color: rgba(1, 1, 1, 0.8);
+}
+
+.tooltip-menu-container {
+    background-color: rgba(1, 1, 1, 1);
+    padding: 4px 8px;
+    flex-grow: 0;
+    align-self: flex-start;
+    margin: 0;
+}
+
+.tooltip-label {
+    color: rgb(196, 196, 196);
+    font-size: 28px;
+}
+
+.title {
+    font-size: 28px;
+    -unity-font-style: bold;
+}
+
+.attraction-ready-icon {
+    width: 84px;
+    height: 84px;
+    position: absolute;
+}
+
+.progress-container {
+    flex-direction: column;
+    height:56px;
+    width: 256px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    --progress-bar__track-color: rgba(118, 118, 118, 0.8);
+    --progress-bar__bar-color: rgb(255, 0, 0);
+}

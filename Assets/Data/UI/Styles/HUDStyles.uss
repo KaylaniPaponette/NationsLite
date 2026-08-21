@@ -1,0 +1,479 @@
+UILabel {
+    font-size: 56px;
+}
+
+.title {
+    -unity-font-style: bold;
+}
+
+.hud-container, .hud-container-column {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%
+}
+
+.hud-container {
+    position: absolute;
+    top: 0;
+}
+
+.hud-container-column {
+    flex-direction: column;
+}
+
+/* TOP SECTION START */
+.top-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+    position:absolute;
+    margin:0px;
+    padding:0 2% 0 2%;
+}
+
+.top-section-objectives, .top-section-time, .top-section-currency {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.8);
+    margin:0px;
+    padding:12px;
+    min-height:120px;
+}
+
+.top-section-currency {
+    min-height: 160px;
+    max-height: 160px;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+
+.top-section-row {
+    justify-content: space-evenly;
+    flex-direction: row;
+    width:100%;
+}
+
+.top-section-row UIContainer {
+    flex-direction: row;
+}
+
+.currency-image {
+    width: 64px;
+    height:64px;
+    margin-right: 4px;
+}
+
+.top-section-objectives {
+    background-color: rgba(0, 0, 0, 0);
+    margin-right:20px; 
+    align-self:flex-start;
+}
+
+.top-section-objectives-title
+{
+    width:100%;
+    margin-top:12px;
+    margin-bottom:12px;
+    top:0;
+}
+
+.objective-items-container {
+    width:100%;
+}
+
+.more-objectives-button {
+    background-color:rgba(1, 1, 1, 0.5);
+    width:100%;
+    height:28px;
+    bottom:0;
+    opacity:0.8;
+}
+
+.more-objectives-button:hover {
+    opacity: 1;
+}
+
+.more-objectives-button UIImage {
+    width:28px;
+    height:28px;
+    align-self: center;
+    opacity: 0.8;
+}
+
+.more-objectives-button UIImage:hover {
+    opacity: 1;
+}
+
+.task-item {
+    border-top-color: rgba(255, 0, 0, 1);
+    border-top-width: 4px;
+    flex-direction: column;
+    padding: 16px;
+    margin-bottom: 16px;
+    width:100%;
+}
+
+.task-item-header {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 48px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.task-item-title {
+    -unity-font-style: bold;
+    -unity-text-align: middle-left;
+    align-items: center;
+}
+
+.hint-button {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.task-item UILabel {
+    font-size:28px;
+}
+
+.task-item-footer {
+    flex-direction: row;
+}
+
+.task-item-footer-right {
+    width: 20%;
+}
+
+.task-reward-container {
+    align-self: flex-end;
+    margin-bottom:8px;
+}
+
+.currency-label-container {
+    flex-direction: row;
+}
+
+.task-step-container {
+    width: 80%;
+}
+
+.task-step {
+    flex-direction: row;
+    margin: 0px 64px 8px 0px;
+}
+
+.task-step-details {
+
+}
+
+.task-step-title {
+    flex-grow: 1;
+}
+
+.task-step-checkmark-container {
+    margin-right: 4px;
+}
+
+.task-step-chevron {
+    flex-shrink: 1;
+    width: 32px;
+    height:32px;
+    margin-right:8px;
+}
+
+.task-step-checkmark {
+    flex-shrink: 1;
+    width: 32px;
+    height: 32px;
+    margin-right:8px;
+
+}
+
+#TaskTitleContainer {
+    flex-direction: row;
+}
+
+.hint-button {
+    width: 24px;
+    height: 24px;
+    margin:0 8px;
+}
+
+.task-claim-button {
+    align-items: center;
+    background-color: rgb(111, 111, 111);
+    padding: 4px;
+    margin: 0px 0px 12px 0px;
+}
+
+.task-claim-button:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+.task-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.task-title {
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+}
+
+.task-description {
+    font-size: 28px;
+    color: rgb(196, 196, 196);
+    white-space: normal;
+}
+
+.task-reward-container {
+    flex-direction: row;
+    align-items: center;
+}
+
+.currency-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 8px;
+}
+
+.currency-cost {
+    align-self: center;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+}
+
+
+.top-section-objectives-title {
+    font-size: 32px;
+}
+
+.top-section-park-name {
+    font-size: 56px;
+}
+
+#TopSectionTimeContainer {
+    flex-direction: row;
+    width:60%;
+    justify-content: space-evenly;
+}
+
+#TimeContainer {
+    flex-direction: row;
+}
+
+#TimeContainer UILabel {
+    font-size: 32px;
+    justify-content: center;
+}
+
+#Day, #PauseControl, #SpeedControl {
+    margin-left: 16px;
+}
+
+#TimeControlsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-control-button {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.time-control-button:hover {
+     background-color: rgba(0, 0, 0, 0);
+}
+
+.time-control-button:disabled {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.time-control-button UIImage {
+    opacity: 0.8;
+}
+
+.time-control-button UIImage:hover
+{
+    opacity: 1;
+}
+
+.time-control-button UIImage:disabled {
+    opacity: 0.4;
+}
+
+
+#BuildingPointsContainer, #WorkerPointsContainer, #ChampionPointsContainer {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-direction: row;
+    margin-right: 12px;
+}
+
+#ChampionPointsContainer {
+    margin-right: 0;
+}
+
+.currency-text {
+    font-size: 32px;
+    margin-right: 12px;
+}
+/* TOP SECTION END */
+
+/* MIDDLE SECTION START */
+.middle-section {
+
+}
+/* MIDDLE SECTION END */
+
+/* BOTTOM SECTION START */
+.bottom-section {
+    position: absolute;
+    bottom:0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width:100%;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin:0px;
+    padding: 0px;
+    flex-direction: row;
+}
+
+.bottom-container
+{
+    width: 33%;
+    margin:0px;
+    padding:25px;
+    align-items: center;
+}
+
+.exit-road-btn {
+    background-color: rgba(65, 65, 65, 0.8);
+    margin: 0px 0px 0px 16px;
+    padding: 8px;
+    width: 35%;
+    justify-content: center;
+}
+
+.exit-road-btn:hover {
+    background-color: rgba(106, 106, 106, 0.8);
+}
+
+.exit-road-btn UILabel
+{
+    align-self: center;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#ActionButtonsContainer {
+    align-items: center;
+    background-color:rgba(1, 1, 1, 0.5);
+    padding:4px;
+    margin:0;
+}
+
+.action-tab {
+    width: 128px;
+    margin:0px;
+    padding:0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width:100%;
+    justify-content: center;
+}
+
+.action-tab:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.action-tab-image {
+    width: 128px;
+    height: 32px;
+    opacity: 0.8;
+}
+
+.action-buttons-container {
+    flex-direction: row;
+    width:80%;
+    justify-content: space-evenly;
+}
+
+
+.action-button {
+    align-items: center;
+    width: 40%;
+    height: auto;
+    margin: 0;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}
+
+.action-button:hover
+{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* BOTTOM SECTION END */
+
+/* CONTROL HINTS */
+.footer-section {
+    width: 100%;
+    height: 108px;
+    background-color: rgba(1,1,1, 0.5);
+    position: absolute;
+    bottom: 0;
+}
+
+.task-step-details {
+    flex-direction: row;
+}
+
+.task-step-title {
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+
+.input-hints-container {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.input-hint {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-images {
+    flex-direction: row;
+    align-items: center;
+}
+
+.action-image {
+	/* width: 96px;
+	height: 46.5px; */
+	margin-right: 8px;
+    justify-content: center;
+}
+
+.action-text {
+	font-size: 28px;
+	-unity-text-align: middle-center;
+    color: white;
+}

@@ -1,0 +1,12 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <UIButton name="selectionButton" class="item-card">
+        <UIImage name="thumbnail" class="attraction-thumbnail" sprite="project://database/Assets/UI/Sprites/placeholders/placeholder-attraction-icon.png" scale-mode="ScaleToFit"/>
+        <UILabel name="description" class="attraction-description" text="This is a sample description of a longer sentence. Maybe i should put a max character limit." />
+        <UILabel name="title" class="attraction-title" text="AttractionsTitle" />
+        <UIContainer name="rewardContainer" class="reward-container">
+            <UIContainer name="currencyContainer" class="currency-container" />
+            <UILabel text="every" />
+            <UILabel name="rewardCycle" />
+        </UIContainer>
+    </UIButton>
+</engine:UXML>
