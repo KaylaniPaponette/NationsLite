@@ -9,6 +9,7 @@ public class BuildMenuItemController : UIViewController
     public UILabel description;
     public UIContainer currencyContainer;
     public UILabel rewardCycle;
+    public UILabel upgradeInfoLabel; // Label to display upgrade information
 
     public CurrencyViewController currencyView;
     public AttractionProfile profile;
@@ -21,6 +22,7 @@ public class BuildMenuItemController : UIViewController
         description = view.Find<UILabel>(nameof(description));
         currencyContainer = view.Find<UIContainer>(nameof(currencyContainer));
         rewardCycle = view.Find<UILabel>(nameof(rewardCycle));
+        upgradeInfoLabel = view.Find<UILabel>(nameof(upgradeInfoLabel));// Find the upgrade info label in the UI
 
         selectionButton.clicked += OnItemClicked;
     }
@@ -43,6 +45,15 @@ public class BuildMenuItemController : UIViewController
             currencyView = CreateChild<CurrencyViewController>(currencyContainer);
 
         currencyView.Setup(profile.rewardPerCycle.type, profile.rewardPerCycle.amount);
+
+        // Display upgrade information if the label exists
+        if (upgradeInfoLabel != null)
+        {
+            int currencyPerLevel = profile.rewardPerCycle.amount;
+            string timePerLevel = profile.cycleTime.ToDisplayString();
+
+            upgradeInfoLabel.text = $"(+{currencyPerLevel} currency / +{timePerLevel} per level)";
+        }
     }
 
     void OnItemClicked()
