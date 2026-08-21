@@ -1,0 +1,18 @@
+VisualElement {
+}
+
+.badge-container {
+    align-items: center;
+    justify-content: center;
+    translate: 0px -110px;
+}
+
+.level-text {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 4px 12px;
+}

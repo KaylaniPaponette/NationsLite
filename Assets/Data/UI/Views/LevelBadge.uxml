@@ -1,0 +1,6 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Data/UI/Styles/LevelBadgeStyles.uss?fileID=7433441132597879392&amp;guid=bc801da120be7844e98e35957d98514a&amp;type=3#LevelBadgeStyles"/>
+    <UIContainer name="levelBadgeContainer" class="badge-container">
+        <UILabel text="Lv. 1" name="levelText" class="level-text"/>
+    </UIContainer>
+</ui:UXML>

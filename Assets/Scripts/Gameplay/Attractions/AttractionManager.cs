@@ -21,13 +21,14 @@ public class AttractionManager : Singleton<AttractionManager>
         worldAttraction.state = new AttractionState
         {
             phase = BuildPhase.Processing,
-            phaseSwitchTime = GameState.instance.dateTime + profile.cycleTime
+            phaseSwitchTime = GameState.instance.dateTime + profile.cycleTime,
+            currentLevel = 1 // Ensure the base level is set when placed!
         };
 
         placedAttractions.Add(worldAttraction);
+        worldAttraction.Initialize(); // Initialize the attraction and level badge view controller
+        worldAttraction.ShowProgress(worldAttraction.state.phaseSwitchTime, profile.cycleTime); // Show the progress bar over the attraction
 
-        // Show the progress bar over the attraction
-        worldAttraction.ShowProgress(worldAttraction.state.phaseSwitchTime);
     }
 
     public bool IsAttractionPlaced(AttractionProfile profile)
@@ -43,13 +44,20 @@ public class AttractionManager : Singleton<AttractionManager>
             if (attraction == null || attraction.state == null)
                 continue;
 
-            // Transition from Processing -> Waiting when time elapses
+            // Transition from processing to waiting phase
             if (attraction.state.phase == BuildPhase.Processing &&
                 GameState.instance.dateTime >= attraction.state.phaseSwitchTime)
             {
                 attraction.state.phase = BuildPhase.Waiting;
                 attraction.HideProgress();
                 attraction.ShowReadyState();
+
+                //deleted LevelBadgeManager
+                //// Track the attraction for level badge updates, create the badge if it doesn't exist yet
+                //if (LevelBadgeManager.instance != null)
+                //{
+                //    LevelBadgeManager.instance.TrackAttraction(attraction);
+                //}
             }
         }
     }

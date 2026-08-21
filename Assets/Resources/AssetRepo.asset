@@ -29,6 +29,8 @@ MonoBehaviour:
       asset: {fileID: 7433441132597879392, guid: 2c4d1eff95d8d0541a4ea1e4bc109afe, type: 3}
     - key: HUDStyles
       asset: {fileID: 7433441132597879392, guid: 2289c25357954f247966e270b1e61843, type: 3}
+    - key: LevelBadgeStyles
+      asset: {fileID: 7433441132597879392, guid: bc801da120be7844e98e35957d98514a, type: 3}
   - useNumberedKey: 0
     folderName: Assets/Data/UI/Views
     assets:
@@ -44,6 +46,8 @@ MonoBehaviour:
       asset: {fileID: 9197481963319205126, guid: 3f61764349f23094f925a4dec97208d3, type: 3}
     - key: HUD
       asset: {fileID: 9197481963319205126, guid: 64224e95ec7f5c94ea21c34010b514b3, type: 3}
+    - key: LevelBadge
+      asset: {fileID: 9197481963319205126, guid: 9c715481da3f86c43a27fe9e2cde01d6, type: 3}
     - key: Root
       asset: {fileID: 9197481963319205126, guid: f7e59a870488870418f216aa22d2f543, type: 3}
   - useNumberedKey: 0

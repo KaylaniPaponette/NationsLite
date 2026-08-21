@@ -28,25 +28,29 @@ public class StandardMode : GameMode, IGameplayInputMapHandler
         base.OnMousePress(e);
         if (e.button == MouseButton.Left && e.interactable == null)
         {
-            if (TryRaycastAttraction(e.screenPosition, out var attraction)) 
+            if (TryRaycastAttraction(e.screenPosition, out var attraction))
             {
                 if (attraction.state != null && attraction.state.phase == BuildPhase.Waiting)
                 {
                     // Addd reward based on the current level of the attraction
                     int rewardAmount = attraction.profile.GetRewardForLevel(attraction.state.currentLevel);
-                    attraction.HideReadyState(showParticles:true);
-                    
+                    GameState.instance.AddAttractionPoints(rewardAmount);
+                    attraction.HideReadyState(showParticles: true);
+
                     if (attraction.state.currentLevel < attraction.profile.maxLevel)
                     {
                         attraction.state.currentLevel++;
                     }
 
                     attraction.state.phase = BuildPhase.Processing;
-                    GameTimeSpan nextCycleTime = attraction.profile.GetCycleTimeForLevel(attraction.state.currentLevel);
 
+                    // Set the next cycle time based on the current level of the attraction
+                    GameTimeSpan nextCycleTime = attraction.profile.GetCycleTimeForLevel(attraction.state.currentLevel);
                     attraction.state.phaseSwitchTime = GameState.instance.dateTime + nextCycleTime;
-                    attraction.ShowProgress(attraction.state.phaseSwitchTime);
+                    attraction.ShowProgress(attraction.state.phaseSwitchTime, nextCycleTime);
                 }
+
+                /*STANDARD BUILD PHASE - NO UPGRADE LEVELS*/
                 //if (attraction.state.phase == BuildPhase.Waiting)
                 //{
                 //    attraction.HideReadyState(showParticles: true);

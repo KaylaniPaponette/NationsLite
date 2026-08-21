@@ -13,40 +13,70 @@ public class WorldAttraction : MonoBehaviour
     AttractionStateProgress progress;
     AttractionReadyIcon readyIcon;
 
-    public UIContainer worldUIContainer;
-    private LevelBadgeViewController levelBadge;
+    LevelBadgeViewController levelBadge; // Reference to the level badge view controller
 
     public void Initialize()
     {
-        // 1. Instantiate the UI controller for the badge
-        if (levelBadge == null)
+        // Subscribe to level changes
+        if (state != null)
         {
-            levelBadge = WorldUIManager.instance.CreateWorldView<LevelBadgeViewController>("levelBadgeContainer", progressAnchor);
+            state.OnLevelChanged += OnLevelChanged;
         }
-
-        levelBadge.UpdateLevelDisplay(state.currentLevel);
-        state.OnLevelChanged += levelBadge.UpdateLevelDisplay;
     }
+
     private void OnDestroy()
     {
         if (state != null)
         {
-            state.OnLevelChanged -= levelBadge.UpdateLevelDisplay;
+            state.OnLevelChanged -= OnLevelChanged;
+        }
+
+        if (levelBadge != null && WorldUIManager.instance != null && Application.isPlaying)
+        {
+            WorldUIManager.instance.ReleaseWorldView(levelBadge);
+            levelBadge = null;
         }
     }
 
-    public void ShowProgress(GameDateTime targetTime)
+    private void OnLevelChanged(int newLevel)
+    {
+        if (levelBadge != null)
+        {
+            levelBadge.UpdateLevelDisplay(newLevel);
+        }
+    }
+
+    public void ShowProgress(GameDateTime targetTime, GameTimeSpan totalTime)
     {
         if (progress == null)
             progress = WorldUIManager.instance.CreateWorldView<AttractionStateProgress>("progressBarContainer", progressAnchor);
         
         progress.progressBarContainer.displayed = true;
-        progress.Setup(targetTime, profile.cycleTime);
+        progress.Setup(targetTime, totalTime);
+
+        // Ensure the level badge is created and displayed
+        if (levelBadge == null)
+        {
+            // Create the level badge and anchor it to the progress bar
+            levelBadge = WorldUIManager.instance.CreateWorldView<LevelBadgeViewController>("levelBadgeContainer", progressAnchor);
+            levelBadge.Setup(profile.maxLevel);
+            levelBadge.UpdateLevelDisplay(state.currentLevel);
+        }
+        else
+        {
+            levelBadge.levelBadgeContainer.displayed = true;
+        }
+
     }
 
     public void HideProgress()
     {
+        if (progress != null)
         progress.progressBarContainer.displayed = false;
+
+        // Keep the level badge visible during the waiting phase
+        if (levelBadge != null)
+            levelBadge.levelBadgeContainer.displayed = true; // Keep visible during waiting phase
     }
 
     public void ShowReadyState()
