@@ -8,6 +8,11 @@
             <UILabel text="every"/>
             <UILabel name="rewardCycle"/>
         </UIContainer>
-        <UILabel name="upgradeInfoLabel" text="Upgrade Info" style="font-size: 24; color: rgb(255, 255, 0); margin-top: 5px;"/>
+        <!-- <UILabel name="upgradeInfoLabel" text="Upgrade Info" style="font-size: 24; color: rgb(255, 255, 0); margin-top: 5px;"/> REPLACED -->
+        <!-- Upgrade UIcontainer to hold the upgrade info text and currency icon -->
+        <UIContainer name="upgradeInfoContainer" class="upgrade-info-container">
+            <UIContainer name="upgradeCurrencyContainer" class="upgrade-currency-container"/>
+            <UILabel name="upgradeTimeLabel" class="upgrade-info-text"/>
+        </UIContainer>
     </UIButton>
 </engine:UXML>

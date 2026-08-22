@@ -161,3 +161,40 @@
 .prestige-cost {
     color: #E9C46A;
 }
+
+/* Layout for upgrade info container */
+.upgrade-info-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.upgrade-currency-container {
+    flex-direction: row;
+    margin-right: 2px;
+}
+
+.upgrade-currency-container .currency-image {
+    width: 38px;
+    height: 38px;
+    margin-right: 5px;
+}
+
+.upgrade-currency-container UILabel {
+    font-size: 24px;
+    color: rgb(255, 255, 0);
+    margin: 0px; 
+    padding: 0px;
+    -unity-text-align: middle-left;
+
+}
+
+.upgrade-info-text {
+    font-size: 24px;
+    color: rgb(255, 255, 0);
+    margin: 0px; 
+    padding: 0px;
+    -unity-text-align: middle-left;
+}
+
